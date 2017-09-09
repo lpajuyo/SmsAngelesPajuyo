@@ -4,32 +4,8 @@
 			<h1>Hello Bootstrap!</h1>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<p class="lead">Menu</p>
-			<div class="btn-group">
-				<button type="button" class="btn btn-primary">Apple</button>
-				<button type="button" class="btn btn-primary">Samsung</button>
-				<div class="btn-group">
-					<button type="button" 
-						class="btn btn-primary dropdown-toggle" 
-						data-toggle="dropdown">Sony <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="">Smart</a></li>
-						<li><a href="">Tablet</a></li>
-					</ul>
-				</div>
-				<button type="button" class="btn btn-default">
-					<span class="glyphicon glyphicon-search"></span>
-					Search
-				</button>
-			</div>
-		</div>
 		<div class="col-md-8 contents">
-			<?php
-			echo "<p class='text-danger'>Hello $name you are $years years old!</p>";
-			?>
+
 			<table class="table table-striped table-hover table-condensed table-responsive">
 				<thead>
 					<tr>
@@ -63,9 +39,7 @@
 				</tbody>
 			</table>
 			<div class="">
-				<a href="" class="btn btn-success">New Student</a>
-				<a href="" class="btn btn-primary btn-lg">New Student</a>
-				<a href="boots/add_student" class="btn btn-danger btn-xs">New Student</a>
+				<a href="boots/add_student" class="btn btn-danger btn-lg">New Student</a>
 			</div>
 		</div>
 	</div>
