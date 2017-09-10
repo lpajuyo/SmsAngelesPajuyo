@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2017 at 09:42 AM
+-- Generation Time: Sep 10, 2017 at 06:53 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -17,8 +17,29 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `student`
+-- Database: `students`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `course`
+--
+
+CREATE TABLE `course` (
+  `course_id` int(3) NOT NULL,
+  `course_name` varchar(4) NOT NULL,
+  `course_desc` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `course`
+--
+
+INSERT INTO `course` (`course_id`, `course_name`, `course_desc`) VALUES
+(1, 'BSIT', 'Bachelor of Science in Information Technology'),
+(2, 'BSCS', 'Bachelor of Science in Computer Science'),
+(3, 'BSIS', 'Bachelor of Science in Information System');
 
 -- --------------------------------------------------------
 
@@ -48,6 +69,12 @@ INSERT INTO `students` (`idno`, `lname`, `fname`, `mname`, `course`, `sex`) VALU
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `course`
+--
+ALTER TABLE `course`
+  ADD PRIMARY KEY (`course_id`);
 
 --
 -- Indexes for table `students`

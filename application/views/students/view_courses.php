@@ -1,32 +1,26 @@
             <div class="row">
-                <h1>View Students</h1>
+                <h1>View Courses</h1>
             </div>
             
             <div class="row">
                 <table class="table table-striped table-hover table-condensed table-responsive">
                     <thead>
                         <tr>
-                            <th>ID NO.</th>
-                            <th>LAST NAME</th>
-                            <th>FIRST NAME</th>
-                            <th>MIDDLE NAME</th>
-                            <th>COURSE</th>
-                            <th>SEX</th>
+                            <th>COURSE ID</th>
+                            <th>COURSE NAME</th>
+                            <th>COURSE DESCRIPTION</th>
                             <th>ACTION</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php
-                    foreach($students as $s){
+                    foreach($courses as $c){
                         echo '	<tr>	
-                                    <td>'.$s['idno'].'</td>
-                                    <td>'.$s['lastname'].'</td>
-                                    <td>'.$s['firstname'].'</td>
-                                    <td>'.$s['middlename'].'</td>
-                                    <td>'.$s['course'].'</td>
-                                    <td>'.$s['sex'].'</td>
+                                    <td>'.$c['course_id'].'</td>
+                                    <td>'.$c['course_name'].'</td>
+                                    <td>'.$c['course_desc'].'</td>
                                     <td>
-                                        <a href="'.base_url('students/profile/'.$s['idno']).'">View</a> |
+                                        <a href="">View</a> |
                                         <a href="">Edit</a> |
                                         <a href="" class="delete">Delete</a>
                                     </td>
@@ -37,7 +31,7 @@
                     </tbody>
                 </table>
                 <div class="">
-                    <a href="<?php echo base_url('Boots/add_student'); ?>" class="btn btn-danger btn-lg">New Student</a>
+                    <a href="<?php echo base_url("Boots/add_course")?>" class="btn btn-danger btn-lg">New Course</a>
                 </div>
             </div>
         </div>
