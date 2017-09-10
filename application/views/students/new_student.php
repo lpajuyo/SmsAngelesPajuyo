@@ -1,14 +1,3 @@
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12 header">
-			<h1>Hello Bootstrap!</h1>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<p class="lead">Menu</p>
-		</div>
-		<div class="col-md-8 contents">
 			<p class="lead">Add New Student</p>
 			<form role="form" class="" method="post">
 				
@@ -39,7 +28,11 @@
 				<div class="form-group">
 					<label for="course">Course:</label>
 					<select class="form-control" id="course" name="course">
-						<option value="BSIT">BSIT</option>
+                        <?php
+                            foreach($courses as $c){
+                                echo '<option value="' . $c['course_name'] . '">' . $c['course_name']. '</option>';
+                            }
+                        ?>
 					</select>
 				</div>
 				<div class="form-group">
