@@ -1,3 +1,4 @@
+
 <div>
 	<?php
 	// $idno = "12-037-001";
@@ -5,6 +6,9 @@
 	// $course = "BSIT";
 	// $sex = "F";
 	// print_r($student);
+    $header_data['title'] = "View Profile";
+    $this->load->view('include/header',$header_data);
+    $this->load->view('include/heading-menu');
 	?>
 
 	<div class="col-md-3 student-profile header">
@@ -16,3 +20,4 @@
 	
 
 </div>
+<?php $this->load->view('include/footer'); ?>
